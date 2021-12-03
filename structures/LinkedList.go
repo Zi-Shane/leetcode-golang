@@ -49,7 +49,7 @@ func Ints2List(nums []int) *ListNode {
 	return l.Next
 }
 
-func New() *LinkedList {
+func NewLinkedList() *LinkedList {
 	return new(LinkedList)
 }
 
@@ -59,7 +59,7 @@ func NewNode(val int) *ListNode {
 	return n
 }
 
-func (l *LinkedList) AddItem(n *ListNode) {
+func (l *LinkedList) AddNode(n *ListNode) {
 	if l.Head == nil {
 		l.Head = n
 		l.Tail = n
@@ -68,6 +68,16 @@ func (l *LinkedList) AddItem(n *ListNode) {
 		l.Tail = l.Tail.Next
 	}
 }
+
+// func (l *LinkedList) AddItem(n int) {
+// 	if l.Head == nil {
+// 		l.Head = NewNode(n)
+// 		l.Tail = l.Head
+// 	} else {
+// 		l.Tail.Next = NewNode(n)
+// 		l.Tail = l.Tail.Next
+// 	}
+// }
 
 func (l *LinkedList) RemoveItem() *ListNode {
 	if l.Head == nil {
