@@ -10,14 +10,10 @@ type question26 struct {
 	ans26
 }
 
-// para 是参数
-// one 代表第一个参数
 type para26 struct {
 	one []int
 }
 
-// ans 是答案
-// one 代表第一个答案
 type ans26 struct {
 	one int
 }

@@ -92,3 +92,11 @@ func (l *LinkedList) RemoveItem() *ListNode {
 	l.Tail = pre_node
 	return tmp
 }
+
+func (node ListNode) printValue() {
+	fmt.Print(node.Val)
+}
+
+func (node ListNode) getNext() ListNode {
+	return *node.Next
+}

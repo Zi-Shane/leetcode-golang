@@ -67,3 +67,19 @@ func merge2(list1 *structures.ListNode, list2 *structures.ListNode) {
 	}
 
 }
+
+func MergeTwoLists2(list1 *structures.ListNode, list2 *structures.ListNode) (res *structures.ListNode) {
+	if list1 == nil {
+		return list2
+	}
+	if list2 == nil {
+		return list1
+	}
+	if list1.Val < list2.Val {
+		list1.Next = MergeTwoLists2(list1.Next, list2)
+		return list1
+	} else {
+		list2.Next = MergeTwoLists2(list1, list2.Next)
+		return list2
+	}
+}
