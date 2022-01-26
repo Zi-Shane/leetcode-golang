@@ -2,7 +2,7 @@ package leetcode
 
 import (
 	"fmt"
-	"leetcode/structures"
+	"leetcode/structures/tree"
 	"testing"
 )
 

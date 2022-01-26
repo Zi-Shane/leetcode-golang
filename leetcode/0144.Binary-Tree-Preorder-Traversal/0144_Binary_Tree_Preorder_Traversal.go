@@ -1,8 +1,8 @@
 package leetcode
 
-import "leetcode/structures"
+import "leetcode/structures/tree"
 
-func preorderTraversal(root *structures.TreeNode) []int {
+func preorderTraversal(root *tree.TreeNode) []int {
 	output := []int{}
 	if root == nil {
 		return output

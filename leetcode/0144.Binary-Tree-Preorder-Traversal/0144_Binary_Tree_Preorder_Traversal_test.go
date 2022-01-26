@@ -2,7 +2,7 @@ package leetcode
 
 import (
 	"fmt"
-	"leetcode/structures"
+	"leetcode/structures/tree"
 	"testing"
 )
 
@@ -14,7 +14,7 @@ type question144 struct {
 // para 是参数
 // one 代表第一个参数
 type para144 struct {
-	one *structures.TreeNode
+	one *tree.TreeNode
 }
 
 // ans 是答案
@@ -24,16 +24,16 @@ type ans144 struct {
 }
 
 func Test_Problem144(t *testing.T) {
-	tree := structures.NewEmptyBST()
-	tree.Root = &structures.TreeNode{1, nil, nil}
-	tree.Root.Right = &structures.TreeNode{2, nil, nil}
-	tree.Root.Right.Left = &structures.TreeNode{3, nil, nil}
+	tr := tree.Tree{}
+	tr.Root = &tree.TreeNode{1, nil, nil}
+	tr.Root.Right = &tree.TreeNode{2, nil, nil}
+	tr.Root.Right.Left = &tree.TreeNode{3, nil, nil}
 
 	qs := []question144{
 
 		{
 			// root = [1, nil, 2, 3]
-			para144{tree.Root},
+			para144{tr.Root},
 			ans144{[]int{2, 1, 3}},
 		},
 	}
